@@ -2,14 +2,12 @@
 
 namespace Database\Factories;
 
-use App\Models\BikeModel;
-use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Bicycle>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Category>
  */
-class BicycleFactory extends Factory
+class CategoryFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -19,8 +17,7 @@ class BicycleFactory extends Factory
     public function definition(): array
     {
         return [
-            'owner' => User::factory(),
-            'model' => BikeModel::all()->random(),
+            'name' => fake()->name(),
         ];
     }
 }

@@ -13,7 +13,25 @@ class BicycleController extends Controller
      */
     public function index()
     {
-        //
+        $bikes = Bicycle::select(
+            [
+                'bicycles.id',
+                'bike_models.name',
+                'bike_models.description',
+                'bike_models.gender',
+                'bike_models.price',
+                'bike_models.wheel_size',
+                'brands.name as brand',
+                'categories.name as category',
+                'users.name as owner'
+            ])
+            ->join('bike_models', 'bike_models.id', 'bicycles.model')
+            ->join('brands', 'bike_models.brand', 'brands.id')
+            ->join('categories', 'bike_models.category', 'categories.id')
+            ->join('users', 'users.id', 'bicycles.owner')
+            ->get();
+
+        return view('home', ['bikes' => $bikes]);
     }
 
     /**
