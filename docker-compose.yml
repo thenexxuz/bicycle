@@ -1,0 +1,41 @@
+version: '2'
+services:
+  build-app:
+    image: bicycle-build
+    volumes:
+      - ./code:/app
+    working_dir: /app
+    build:
+      context: docker/build
+      dockerfile: ./Dockerfile
+  bicycle_db:
+    image: mysql:latest
+    volumes:
+      - "./.mysql-data/db:/var/lib/mysql"
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: my_secure_password
+      MYSQL_DATABASE: bicycle_db
+      MYSQL_USER: bicycle_user
+      MYSQL_PASSWORD: bicycle_password
+  php:
+    image: bicycle-php
+    volumes:
+      - ./code:/app
+    working_dir: /app
+    build:
+      context: docker/php
+      dockerfile: ./Dockerfile
+  web:
+    image: bicycle-nginx
+    build:
+      context: docker/nginx
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./code:/app
+    depends_on:
+      - php
+    ports:
+      - 8000:80

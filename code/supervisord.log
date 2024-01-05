@@ -1,0 +1,76 @@
+2024-01-05 17:25:00,327 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-01-05 17:25:00,328 INFO Included extra file "/etc/supervisor/conf.d/startup-script.conf" during parsing
+2024-01-05 17:25:00,334 INFO supervisord started with pid 1
+2024-01-05 17:25:01,335 INFO spawnerr: can't find command 'bash'
+2024-01-05 17:25:02,337 INFO spawnerr: can't find command 'bash'
+2024-01-05 17:25:04,338 INFO spawnerr: can't find command 'bash'
+2024-01-05 17:25:07,343 INFO spawnerr: can't find command 'bash'
+2024-01-05 17:25:07,343 INFO gave up: startup-scripts_00 entered FATAL state, too many start retries too quickly
+2024-01-05 17:25:10,347 WARN received SIGQUIT indicating exit request
+2024-01-05 17:26:20,355 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-01-05 17:26:20,355 INFO Included extra file "/etc/supervisor/conf.d/startup-script.conf" during parsing
+2024-01-05 17:26:20,365 INFO supervisord started with pid 1
+2024-01-05 17:26:21,370 INFO spawned: 'startup-scripts_00' with pid 7
+2024-01-05 17:26:21,424 WARN exited: startup-scripts_00 (exit status 255; not expected)
+2024-01-05 17:26:22,428 INFO spawned: 'startup-scripts_00' with pid 10
+2024-01-05 17:26:22,456 WARN exited: startup-scripts_00 (exit status 255; not expected)
+2024-01-05 17:26:24,463 INFO spawned: 'startup-scripts_00' with pid 13
+2024-01-05 17:26:24,531 WARN exited: startup-scripts_00 (exit status 255; not expected)
+2024-01-05 17:26:27,539 INFO spawned: 'startup-scripts_00' with pid 16
+2024-01-05 17:26:27,605 WARN exited: startup-scripts_00 (exit status 255; not expected)
+2024-01-05 17:26:28,606 INFO gave up: startup-scripts_00 entered FATAL state, too many start retries too quickly
+2024-01-05 17:27:54,694 WARN received SIGQUIT indicating exit request
+2024-01-05 17:27:58,439 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-01-05 17:27:58,439 INFO Included extra file "/etc/supervisor/conf.d/startup-script.conf" during parsing
+2024-01-05 17:27:58,445 INFO supervisord started with pid 1
+2024-01-05 17:27:59,448 INFO spawned: 'startup-scripts_00' with pid 13
+2024-01-05 17:27:59,472 WARN exited: startup-scripts_00 (exit status 255; not expected)
+2024-01-05 17:28:00,476 INFO spawned: 'startup-scripts_00' with pid 16
+2024-01-05 17:28:00,509 WARN exited: startup-scripts_00 (exit status 255; not expected)
+2024-01-05 17:28:02,516 INFO spawned: 'startup-scripts_00' with pid 19
+2024-01-05 17:28:02,583 WARN exited: startup-scripts_00 (exit status 255; not expected)
+2024-01-05 17:28:05,590 INFO spawned: 'startup-scripts_00' with pid 22
+2024-01-05 17:28:05,634 WARN exited: startup-scripts_00 (exit status 255; not expected)
+2024-01-05 17:28:06,635 INFO gave up: startup-scripts_00 entered FATAL state, too many start retries too quickly
+2024-01-05 17:28:42,672 WARN received SIGQUIT indicating exit request
+2024-01-05 17:28:48,394 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-01-05 17:28:48,394 INFO Included extra file "/etc/supervisor/conf.d/startup-script.conf" during parsing
+2024-01-05 17:28:48,402 INFO supervisord started with pid 1
+2024-01-05 17:28:49,406 INFO spawned: 'startup-scripts_00' with pid 13
+2024-01-05 17:28:49,407 WARN received SIGQUIT indicating exit request
+2024-01-05 17:28:49,408 INFO waiting for startup-scripts_00 to die
+2024-01-05 17:28:49,437 WARN stopped: startup-scripts_00 (exit status 255)
+2024-01-05 17:29:30,668 INFO Included extra file "/etc/supervisor/conf.d/startup-script.conf" during parsing
+2024-01-05 17:29:30,668 INFO Set uid to user 0 succeeded
+2024-01-05 17:29:30,672 INFO supervisord started with pid 1
+2024-01-05 17:29:31,676 INFO spawned: 'startup-scripts_00' with pid 7
+2024-01-05 17:29:32,844 INFO success: startup-scripts_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-01-05 17:29:45,480 WARN exited: startup-scripts_00 (exit status 1; not expected)
+2024-01-05 17:45:10,454 WARN received SIGQUIT indicating exit request
+2024-01-05 17:48:21,638 INFO Included extra file "/etc/supervisor/conf.d/startup-script.conf" during parsing
+2024-01-05 17:48:21,639 INFO Set uid to user 0 succeeded
+2024-01-05 17:48:21,642 INFO supervisord started with pid 1
+2024-01-05 17:48:22,645 INFO spawned: 'startup-scripts_00' with pid 7
+2024-01-05 17:48:23,807 INFO success: startup-scripts_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-01-05 17:48:26,186 INFO exited: startup-scripts_00 (exit status 0; expected)
+2024-01-05 17:49:01,224 WARN received SIGQUIT indicating exit request
+2024-01-05 17:49:06,783 INFO Included extra file "/etc/supervisor/conf.d/startup-script.conf" during parsing
+2024-01-05 17:49:06,783 INFO Set uid to user 0 succeeded
+2024-01-05 17:49:06,786 INFO supervisord started with pid 1
+2024-01-05 17:49:07,790 INFO spawned: 'startup-scripts_00' with pid 13
+2024-01-05 17:49:09,079 INFO success: startup-scripts_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-01-05 17:49:10,502 INFO exited: startup-scripts_00 (exit status 0; expected)
+2024-01-05 17:50:00,551 WARN received SIGQUIT indicating exit request
+2024-01-05 17:51:03,553 INFO Included extra file "/etc/supervisor/conf.d/startup-script.conf" during parsing
+2024-01-05 17:51:03,553 INFO Set uid to user 0 succeeded
+2024-01-05 17:51:03,556 INFO supervisord started with pid 1
+2024-01-05 17:51:04,559 INFO spawned: 'startup-scripts_00' with pid 7
+2024-01-05 17:51:05,763 INFO success: startup-scripts_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-01-05 17:51:07,963 INFO exited: startup-scripts_00 (exit status 0; expected)
+2024-01-05 17:51:27,984 WARN received SIGQUIT indicating exit request
+2024-01-05 17:52:05,136 INFO Included extra file "/etc/supervisor/conf.d/startup-script.conf" during parsing
+2024-01-05 17:52:05,137 INFO Set uid to user 0 succeeded
+2024-01-05 17:52:05,143 INFO supervisord started with pid 1
+2024-01-05 17:52:06,146 INFO spawned: 'startup-scripts_00' with pid 6
+2024-01-05 17:52:07,399 INFO success: startup-scripts_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-01-05 17:52:09,562 INFO exited: startup-scripts_00 (exit status 0; expected)
