@@ -29,6 +29,7 @@ class BicycleController extends Controller
             ->join('brands', 'bike_models.brand', 'brands.id')
             ->join('categories', 'bike_models.category', 'categories.id')
             ->join('users', 'users.id', 'bicycles.owner')
+            ->orderBy('users.name', 'asc')
             ->get();
 
         return view('home', ['bikes' => $bikes]);

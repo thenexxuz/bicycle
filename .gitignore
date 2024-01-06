@@ -2,3 +2,7 @@
 .idea/
 
 .mysql-data/
+
+code/supervisord.log
+
+code/supervisord.pid
