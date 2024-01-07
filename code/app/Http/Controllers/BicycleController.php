@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreBicycleRequest;
 use App\Http\Requests\UpdateBicycleRequest;
 use App\Models\Bicycle;
+use App\Models\BikeModel;
+use App\Models\Brand;
+use App\Models\Category;
+use Illuminate\Http\Request;
 
 class BicycleController extends Controller
 {
@@ -30,9 +34,10 @@ class BicycleController extends Controller
             ->join('categories', 'bike_models.category', 'categories.id')
             ->join('users', 'users.id', 'bicycles.owner')
             ->orderBy('users.name', 'asc')
+            ->where('users.id', auth()->id())
             ->get();
 
-        return view('home', ['bikes' => $bikes]);
+        return view('bikes.index', ['bikes' => $bikes]);
     }
 
     /**
@@ -40,7 +45,14 @@ class BicycleController extends Controller
      */
     public function create()
     {
-        //
+        return view(
+            'bikes.create',
+            [
+                'categories' => Category::all(),
+                'brands' => Brand::all(),
+                'bike_models' => BikeModel::all(),
+            ]
+        );
     }
 
     /**
@@ -48,7 +60,25 @@ class BicycleController extends Controller
      */
     public function store(StoreBicycleRequest $request)
     {
-        //
+        $validated = $request->validated();
+
+        $bike_model = new BikeModel([
+            'name' => $validated['name'],
+            'brand' => $validated['brand'],
+            'price' => $validated['price'],
+            'description' => $validated['description'],
+            'gender' => $validated['gender'],
+            'category' => $validated['category'],
+            'wheel_size' => $validated['wheel_size'],
+        ]);
+        $bike_model->save();
+        $bike = new Bicycle([
+            'owner' => auth()->id(),
+            'model' => $bike_model->id,
+        ]);
+        $bike->save();
+
+        return to_route('bikes.index');
     }
 
     /**

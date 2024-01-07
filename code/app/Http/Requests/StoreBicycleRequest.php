@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class StoreBicycleRequest extends FormRequest
 {
@@ -11,7 +12,7 @@ class StoreBicycleRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return auth()->check();
     }
 
     /**
@@ -22,7 +23,13 @@ class StoreBicycleRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name' => 'required',
+            'brand' => 'integer|required',
+            'price' => 'required',
+            'description' => 'required',
+            'gender' => 'boolean|required',
+            'category' => 'integer|required',
+            'wheel_size' => 'integer|required',
         ];
     }
 }

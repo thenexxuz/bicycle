@@ -3,7 +3,14 @@
 @section('content')
     <div class="col-md-12 m-auto">
         <div class="card">
-            <div class="card-header bg-primary">List of Bicycles</div>
+            <div class="card-header bg-primary">
+                My Bicycles
+                <span class="float-end">
+                    <a class="text-decoration-none text-light" href="{{ route('bikes.create') }}">
+                        <i class="fa-solid fa-circle-plus"></i>
+                    </a>
+                </span>
+            </div>
             <div class="card-body">
                 <table class="table table-hover">
                     <thead>

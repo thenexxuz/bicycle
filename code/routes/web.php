@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BicycleController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,4 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [BicycleController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::resource('bikes', BicycleController::class);
